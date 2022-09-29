@@ -1,0 +1,52 @@
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    table,
+    th,
+    td {
+        width: 1490px;
+        border: 1px solid rgb(0, 0, 0)
+    }
+    
+    body {
+        background-color: rgb(123, 226, 255);
+    }
+
+    div {
+        background-color: rgb(253, 253, 253);
+        width: 1490px;
+        padding:1px;
+        border: 1px solid rgb(0, 0, 0);
+        margin: 0;
+
+    a:link {
+        color: green;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: darksalmon;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: rgb(252, 223, 0);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(79, 41, 249);
+        text-decoration: none;
+    }
+    .information {
+        font-family: cursive;
+        color: rgb(79, 41, 249);
+    }
+
+    #datTitle {
+        font-family: 'Segoe UI';
+        color: rgb(79, 41, 249)
+    }
+</style>
