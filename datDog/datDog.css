@@ -1,6 +1,6 @@
 #datTitle {
     font-family: 'Segoe UI';
-    color: rgb(49, 18, 189);
+    color: rgb(79, 41, 249);
 }
 h1 {text-align: center;}
 
@@ -18,41 +18,57 @@ body {
 div {
     background-color: rgb(253, 253, 253);
     width: 1490px;
-    padding: 1px;
+    padding: 20px;
     border: 1px solid rgb(0, 0, 0);
     margin: 0;
 
+{
+    background: rgb(189, 209, 254);
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+}
+
+#navigation{
+    background: rgb(189, 209, 254);
+            margin: 0 auto;
+            display: flex;
+            padding: 10px;
+}
+
+}
     /* unvisited link */
-    a:link {
+.pages a:link {
         color: green;
         text-decoration: none;
-    }
+}
 
     /* visited link */
-    a:visited {
+.pages a:visited {
         color: rgb(79, 41, 249);
         text-decoration: none;
-    }
+}
 
     /* mouse over link */
-    a:hover {
+.pages a:hover {
         color: darksalmon;
         text-decoration: none;
-    }
+}
 
     /* selected link */
-    a:active {
+.pages a:active {
         color: rgb(252, 223, 0);
         text-decoration: none;
-    }
+}
 
-    .information {
+.information {
         font-family: cursive;
         color: rgb(79, 41, 249);
-    }
-    .mainContent {
+}
+
+#mainContent {
         width: 60%
         margin: auto;
-    }
+}
 
     
