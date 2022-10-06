@@ -2,7 +2,10 @@
     font-family: 'Segoe UI';
     color: rgb(79, 41, 249);
 }
-h1 {text-align: center;}
+
+h1 {
+    text-align: center;
+}
 
 table,
 th,
@@ -22,53 +25,51 @@ div {
     border: 1px solid rgb(0, 0, 0);
     margin: 0;
 
-{
-    background: rgb(189, 209, 254);
-    margin: 0 auto;
-    display: flex;
-    padding: 10px;
+        {
+        background: rgb(189, 209, 254);
+        margin: 0 auto;
+        display: flex;
+        padding: 10px;
+    }
+
+    #navigation {
+        background: rgb(189, 209, 254);
+        margin: 0 auto;
+        display: flex;
+        padding: 10px;
+    }
+
 }
 
-#navigation{
-    background: rgb(189, 209, 254);
-            margin: 0 auto;
-            display: flex;
-            padding: 10px;
-}
-
-}
-    /* unvisited link */
+/* unvisited link */
 .pages a:link {
-        color: green;
-        text-decoration: none;
+    color: green;
+    text-decoration: none;
 }
 
-    /* visited link */
+/* visited link */
 .pages a:visited {
-        color: rgb(79, 41, 249);
-        text-decoration: none;
+    color: rgb(79, 41, 249);
+    text-decoration: none;
 }
 
-    /* mouse over link */
+/* mouse over link */
 .pages a:hover {
-        color: darksalmon;
-        text-decoration: none;
+    color: darksalmon;
+    text-decoration: none;
 }
 
-    /* selected link */
+/* selected link */
 .pages a:active {
-        color: rgb(252, 223, 0);
-        text-decoration: none;
+    color: rgb(252, 223, 0);
+    text-decoration: none;
 }
 
 .datDog {
-        font-family: cursive;
-        color: rgb(79, 41, 249);
+    font-family: cursive;
+    color: rgb(79, 41, 249);
 }
 
 #mainContent {
-        width: 60%
-        margin: auto;
+    width: 60% margin: auto;
 }
-
-    
