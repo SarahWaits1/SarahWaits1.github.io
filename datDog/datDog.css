@@ -50,5 +50,9 @@ div {
         font-family: cursive;
         color: rgb(79, 41, 249);
     }
+    .mainContent {
+        width: 60%
+        margin: auto;
+    }
 
     
