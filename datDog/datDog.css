@@ -24,12 +24,6 @@ div {
     padding: 20px;
     border: 1px solid rgb(0, 0, 0);
     margin: 0;
-
-        {
-        background: rgb(189, 209, 254);
-        margin: 0 auto;
-        display: flex;
-        padding: 10px;
     }
 
     #navigation {
