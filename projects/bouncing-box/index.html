@@ -74,9 +74,12 @@
 				// Your Code to Increase positionX by 10 here//
 				positionX = positionX + speed;
 				moveBoxTo(positionX);
-				if (positionX > boardWidth);
-					console.log ();
-			};
+				if (positionX > boardWidth){
+					console.log (speed = -speed);
+				}
+				if (positionX < 0){
+					console.log (speed = +speed);
+				}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
