@@ -74,16 +74,24 @@ var init = function (window) {
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
-
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-            
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
-
-
+            //When circle goes off screen on the left, it comes back on screen starting from the right//
+            if ( circle.x < 0 ) {
+                circle.x = canvas.width;
+            }
+            //When circle goes off screen at the bottom, it comes back on screen starting from the top//
+            if ( circle.y > canvas.height ) {
+                circle.y = 0;
+            }
+            //When circle goes off screen at the top, it comes back on screen starting from the top//
+            if (circle.y < 0){
+                circle.y = canvas.height;
+            }
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
