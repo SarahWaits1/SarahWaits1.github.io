@@ -55,26 +55,16 @@ var init = function (window) {
             // TODO 4 : Update the circle's position //
             for (var i = 0; i < 100; i++){
                 physikz.updatePosition(circles[i]);
+                
             }
-            // physikz.updatePosition(circles[i]);
-            // physikz.updatePosition(circles[i]);
-            // physikz.updatePosition(circles[i]);
-            // physikz.updatePosition(circles[i]);
-            // physikz.updatePosition(circles[i]);
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
             for (var i = 0; i < 100; i++){
                 game.checkCirclePosition(circles[i]);
             }
-            
-            // game.checkCirclePosition(circles[0]);
-            // game.checkCirclePosition(circles[1]);
-            // game.checkCirclePosition(circles[2]);
-            // game.checkCirclePosition(circles[3]);
-            // game.checkCirclePosition(circles[4]);
 
             // TODO 9 : Iterate over the array
-           
+        //Function calls are deleted to keep my code dry//  
             
         }
     
@@ -84,15 +74,18 @@ var init = function (window) {
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
+            var leftEdge = circle.x -circle.radius;
+            var rightEdge = circle.x + circle.radius;
+            
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
-                circle.x = 0;
+            if ( leftEdge > canvas.width ) {
+                circle.x = -circle.radius;
             }
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
             //When circle goes off screen on the left, it comes back on screen starting from the right//
-            if ( circle.x < 0 ) {
-                circle.x = canvas.width;
+            if ( rightEdge < 0 ) {
+                circle.x = canvas.height + circle.radius;
             }
             //When circle goes off screen at the bottom, it comes back on screen starting from the top//
             if ( circle.y > canvas.height ) {
@@ -102,10 +95,6 @@ var init = function (window) {
             if (circle.y < 0){
                 circle.y = canvas.height;
             }
-
-            //var rightEdge = circle.x + circle.radius;//finish this in todo 6 challenge//
-            //var leftEdge = circle.y + circle.radius;//
-
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
