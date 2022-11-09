@@ -64,7 +64,7 @@ var init = function (window) {
             }
 
             // TODO 9 : Iterate over the array
-        //Function calls are deleted to keep my code dry//  
+        //Function calls are deleted to keep my code dry and avoid hard coding//  
             
         }
     
