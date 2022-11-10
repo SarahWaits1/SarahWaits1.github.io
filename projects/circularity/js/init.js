@@ -9,7 +9,6 @@ var init = function (window) {
         view = app.view,
         fps = draw.fps('#000');
         
-    
     window.opspark.makeGame = function() {
         
         window.opspark.game = {};
@@ -35,12 +34,6 @@ var init = function (window) {
         for (var i = 0; i < 100; i++){
             drawCircle();
         }
-        
-        // drawCircle();
-        // drawCircle();
-        // drawCircle();
-        // drawCircle();
-        // drawCircle();
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -54,15 +47,16 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the circle's position //
             for (var i = 0; i < 100; i++){
-                physikz.updatePosition(circles[i]);
+                var eachCircle = circles[i]
+                physikz.updatePosition(eachCircle);
                 
             }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
             for (var i = 0; i < 100; i++){
-                game.checkCirclePosition(circles[i]);
+                game.checkCirclePosition(eachCircle);
             }
-
+//circles[i]
             // TODO 9 : Iterate over the array
         //Function calls are deleted to keep my code dry and avoid hard coding//  
             
@@ -79,24 +73,26 @@ var init = function (window) {
             var topEdge = circle.y -circle.radius;
             var bottomEdge = circle.y + circle.radius;
             
-            // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( leftEdge > canvas.width ) {
-                circle.x = -circle.radius;
+           // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
+            if (leftEdge > canvas.width) {
+                circle.x = canvas.width -circle.radius;
             }
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
             //When circle goes off screen on the left, it comes back on screen starting from the right//
-            if ( rightEdge < 0 ) {
-                circle.x = canvas.height + circle.radius;
+            if (rightEdge < 0 -circle.radius) {
+                circle.x = 0 + circle.radius;
             }
+
             //When circle goes off screen at the bottom, it comes back on screen starting from the top//
-            if (topEdge > canvas.height ) {
-                circle.y = -circle.radius;
+            if (topEdge > canvas.height) {
+                circle.y = 0 -circle.radius;
             }
             //When circle goes off screen at the top, it comes back on screen starting from the top//
             if (bottomEdge < 0){
-                circle.y = canvas.width + circle.radius;
+                circle.y = canvas.height + circle.radius;
             }
+
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
