@@ -46,17 +46,18 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            for (var i = 0; i < 100; i++){
+            for (var i = 0; i < circles.length; i++){
                 var eachCircle = circles[i]
                 physikz.updatePosition(eachCircle);
                 
             }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            for (var i = 0; i < 100; i++){
+            for (var i = 0; i < circles.length; i++){
+                var eachCircle = circles[i]
                 game.checkCirclePosition(eachCircle);
             }
-//circles[i]
+
             // TODO 9 : Iterate over the array
         //Function calls are deleted to keep my code dry and avoid hard coding//  
             
@@ -85,7 +86,7 @@ var init = function (window) {
             }
 
             //When circle goes off screen at the bottom, it comes back on screen starting from the top//
-            if (topEdge > canvas.height) {
+            if (topEdge > canvas.width) {
                 circle.y = 0 -circle.radius;
             }
             //When circle goes off screen at the top, it comes back on screen starting from the top//
