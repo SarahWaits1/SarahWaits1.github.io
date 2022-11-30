@@ -48,8 +48,8 @@ var background = function (window) {
             var moon = draw.bitmap("img/moon.png");
             moon.x = 1150;
             moon.y = 70;
-            moon.scaleX = .6;
-            moon.scaleY = .6;
+            moon.scaleX = .4;
+            moon.scaleY = .4;
             background.addChild(moon);
 
             for (var i= 0; i < 150; i++){
@@ -62,7 +62,7 @@ var background = function (window) {
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             for (var i = 0; i < 5; ++i) {
                 var buildingHeight = 300; 
-                var building = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+                var building = draw.rect(75, buildingHeight, "purple", "purple", 1);
                 building.x = 200 * i;
                 building.y = groundY - buildingHeight;
                 background.addChild(building);
@@ -96,8 +96,10 @@ var background = function (window) {
             // TODO 5: Part 2 - Parallax
             for (var i; i < buildings.length; i++){
                 var eachElement = buildings[i];
+        
             }
             
+    
 
         } // end of update function - DO NOT DELETE
         
