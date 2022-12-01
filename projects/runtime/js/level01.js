@@ -23,14 +23,42 @@ var level01 = function (window) {
         };
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
-        game.setDebugMode(true);
+        game.setDebugMode(false);
 
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
+            function createSawBlade (x, y){
+            var hitZoneSize = 25;
+            var damageFromObstacle = 10;
+            var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+            sawBladeHitZone.x = x;
+            sawBladeHitZone.y = y;
+            game.addGameItem(sawBladeHitZone);
+            var obstacleImage = draw.bitmap("img/sawblade.png");
+            sawBladeHitZone.addChild(obstacleImage);
+            obstacleImage.x = -25;
+            obstacleImage.y = -25;
+            }
 
-        
-        
-        
+            createSawBlade(800, 250);
+            createSawBlade(1190, 350);
+            createSawBlade(1600, 255);
+
+            // function createBlazingSun (x, y){
+            //     var hitZoneSize = 25;
+            //     var damageFromObstacle = 10;
+            //     var blazingSunHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+            //     blazingSunHitZone.x = x;
+            //     blazingSunHitZone.y = y;
+            //     game.addGameItem(blazingSunHitZone);
+            //     var obstacleImage = draw.bitmap("img/blazingsun.png");
+            //     blazingSunHitZone.addChild(obstacleImage);
+            //     obstacleImage.x = -25;
+            //     obstacleImage.y = -25;
+            //     }
+
+            //     createBlazingSun(700, 230);
+            
         // DO NOT EDIT CODE BELOW HERE
     }
 };
