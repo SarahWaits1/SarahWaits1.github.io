@@ -45,8 +45,8 @@ var level01 = function (window) {
             createSawBlade(1600, 255);
 
             // function createBlazingSun (x, y){
-            //     var hitZoneSize = 25;
-            //     var damageFromObstacle = 10;
+            //     var hitZoneSize = 20;
+            //     var damageFromObstacle = 5;
             //     var blazingSunHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
             //     blazingSunHitZone.x = x;
             //     blazingSunHitZone.y = y;
@@ -57,7 +57,7 @@ var level01 = function (window) {
             //     obstacleImage.y = -25;
             //     }
 
-            //     createBlazingSun(700, 230);
+                createBlazingSun(700, 230);
             
         // DO NOT EDIT CODE BELOW HERE
     }
