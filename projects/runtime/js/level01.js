@@ -57,7 +57,7 @@ var level01 = function (window) {
             //     obstacleImage.y = -25;
             //     }
 
-                createBlazingSun(700, 230);
+            //     createBlazingSun(700, 230);
             
         // DO NOT EDIT CODE BELOW HERE
     }
