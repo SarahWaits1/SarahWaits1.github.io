@@ -44,20 +44,20 @@ var level01 = function (window) {
             createSawBlade(1190, 350);
             createSawBlade(1600, 255);
 
-            // function createBlazingSun (x, y){
+            // function createFireball (x,y){
             //     var hitZoneSize = 20;
             //     var damageFromObstacle = 5;
-            //     var blazingSunHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-            //     blazingSunHitZone.x = x;
-            //     blazingSunHitZone.y = y;
-            //     game.addGameItem(blazingSunHitZone);
-            //     var obstacleImage = draw.bitmap("img/blazingsun.png");
-            //     blazingSunHitZone.addChild(obstacleImage);
+            //     var fireballHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+            //     fireballHitZone.x = x;
+            //     fireballHitZone.y = y;
+            //     game.addGameItem(fireballHitZone);
+            //     var obstacleImage = draw.bitmap("img/fireball.png");
+            //     fireballHitZone.addChild(obstacleImage);
             //     obstacleImage.x = -25;
             //     obstacleImage.y = -25;
-            //     }
+            // }
 
-            //     createBlazingSun(700, 230);
+            // createFireball(200, 200);
             
         // DO NOT EDIT CODE BELOW HERE
     }
