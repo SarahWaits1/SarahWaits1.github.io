@@ -43,7 +43,7 @@ var level01 = function (window) {
             createSawBlade(800, 250);
             createSawBlade(1190, 350);
             createSawBlade(1600, 255);
-
+///////////////////////////////////////////DO TODO 8///////////////////////
             // function createFireball (x,y){
             //     var hitZoneSize = 20;
             //     var damageFromObstacle = 5;
@@ -58,6 +58,24 @@ var level01 = function (window) {
             // }
 
             // createFireball(200, 200);
+//////////////////////////////////////////////////////////////////////////^^^^^^^^^^^//////////
+
+            var enemy = game.createGameItem("enemy", 25);
+            var redSquare = draw.rect(50, 360, "red");
+            redSquare.x = -25;
+            redSquare.y = -25;
+            enemy.addChild(redSquare);
+            enemy.x = 400;
+            enemy.y = groundY - 140;
+            game.addGameItem(enemy);
+            enemy.velocityX = 1;
+            enemy.rotationalVelocity = 2;
+
+            enemy.onPlayerCollision = function () {
+                game.changeIntegrity(-8)
+            };
+
+            
             
         // DO NOT EDIT CODE BELOW HERE
     }
