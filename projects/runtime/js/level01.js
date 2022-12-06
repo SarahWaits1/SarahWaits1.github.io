@@ -65,7 +65,7 @@ var level01 = function (window) {
             redSquare.x = -25;
             redSquare.y = -25;
             enemy.addChild(redSquare);
-            enemy.x = 400;
+            enemy.x = 250g;
             enemy.y = groundY - 140;
             game.addGameItem(enemy);
             enemy.velocityX = 1;
@@ -74,7 +74,7 @@ var level01 = function (window) {
             enemy.onPlayerCollision = function () {
                 game.changeIntegrity(-8)
             };
-
+/////On todo 10b/////
             
             
         // DO NOT EDIT CODE BELOW HERE
