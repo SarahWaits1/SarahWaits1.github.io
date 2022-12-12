@@ -71,9 +71,9 @@ var level01 = function (window) {
             enemy.velocityX = 1;
             enemy.rotationalVelocity = 2;
 
-            enemy.onPlayerCollision = function () {
-                game.changeIntegrity(-8);
-            };
+            // enemy.onPlayerCollision = function () {
+            //     game.changeIntegrity(-8);
+            // };
             
 ///////////////////////////////////////On todo 10b/////
             
