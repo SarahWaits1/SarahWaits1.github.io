@@ -65,16 +65,17 @@ var level01 = function (window) {
             redSquare.x = -25;
             redSquare.y = -25;
             enemy.addChild(redSquare);
-            enemy.x = 250g;
+            enemy.x = 250;
             enemy.y = groundY - 140;
             game.addGameItem(enemy);
             enemy.velocityX = 1;
             enemy.rotationalVelocity = 2;
 
             enemy.onPlayerCollision = function () {
-                game.changeIntegrity(-8)
+                game.changeIntegrity(-8);
             };
-/////On todo 10b/////
+            
+///////////////////////////////////////On todo 10b/////
             
             
         // DO NOT EDIT CODE BELOW HERE
