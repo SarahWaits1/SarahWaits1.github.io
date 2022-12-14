@@ -23,7 +23,7 @@ var level01 = function (window) {
         };
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
-        game.setDebugMode(false);
+        game.setDebugMode(true);
 
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
@@ -43,41 +43,69 @@ var level01 = function (window) {
             createSawBlade(800, 250);
             createSawBlade(1190, 350);
             createSawBlade(1600, 255);
-///////////////////////////////////////////DO TODO 8///////////////////////
-            // function createFireball (x,y){
-            //     var hitZoneSize = 20;
-            //     var damageFromObstacle = 5;
-            //     var fireballHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-            //     fireballHitZone.x = x;
-            //     fireballHitZone.y = y;
-            //     game.addGameItem(fireballHitZone);
-            //     var obstacleImage = draw.bitmap("img/fireball.png");
-            //     fireballHitZone.addChild(obstacleImage);
-            //     obstacleImage.x = -25;
-            //     obstacleImage.y = -25;
+
+            // function createFireball(x,y){ 
+            // var hitZoneSize = 25;
+            // var damageFromObstacle = 10;
+            // var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+            // sawBladeHitZone.x = x;
+            // sawBladeHitZone.y = y;
+            // game.addGameItem(sawBladeHitZone);
+            // var fireball = draw.bitmap("img/images.png")
+            // sawBladeHitZone.addChild(fireball);
+            // fireball.x = -25;
+            // fireball.y = -25;
             // }
+            
+            // createFireball(300, 200)
+            
 
-            // createFireball(200, 200);
-//////////////////////////////////////////////////////////////////////////^^^^^^^^^^^//////////
-
+            function createEnemy(x,y){
             var enemy = game.createGameItem("enemy", 25);
-            var redSquare = draw.rect(50, 360, "red");
+            var redSquare = draw.rect(50, 50, "red");
             redSquare.x = -25;
             redSquare.y = -25;
             enemy.addChild(redSquare);
-            enemy.x = 250;
-            enemy.y = groundY - 140;
+            enemy.x = x;
+            enemy.y = y;
             game.addGameItem(enemy);
-            enemy.velocityX = 1;
-            enemy.rotationalVelocity = 2;
+            enemy.velocityX = -1;
+            // enemy.rotationalVelocity = 2;
 
-            // enemy.onPlayerCollision = function () {
-            //     game.changeIntegrity(-8);
-            // };
+            enemy.onPlayerCollision = function () {
+                game.changeIntegrity(-8);
+            };
+
+            enemy.onProjectileCollision = function () {
+                game.increaseScore(40);
+                enemy.shrink();
+            };
+        }
+            createEnemy(400, groundY - 20);
+            createEnemy(800, groundY - 110);
+            createEnemy(1200, groundY - 115);
             
-///////////////////////////////////////On todo 10b/////
-            
-            
+            function createReward(x,y){
+                var reward = game.createGameItem("reward", 25);
+                var goldSquare = draw.rect(50, 50, "gold");
+                goldSquare.x = -25;
+                goldSquare.y = -25;
+                reward.addChild(goldSquare);
+                reward.x = x;
+                reward.y = y;
+                game.addGameItem(reward);
+                reward.velocityX = -1;
+                // reward.rotationalVelocity = 2;
+    
+                reward.onPlayerCollision = function () {
+                    game.changeIntegrity(+20);
+                };
+            }
+
+            createReward(500, groundY - 20);
+            createReward(910, groundY - 30);
+            createReward(1300, groundY - 40);
+
         // DO NOT EDIT CODE BELOW HERE
     }
 };
