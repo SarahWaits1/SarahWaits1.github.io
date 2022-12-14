@@ -44,20 +44,20 @@ var level01 = function (window) {
             createSawBlade(1190, 350);
             createSawBlade(1600, 255);
 
-            // function createFireball(x,y){ 
-            // var hitZoneSize = 25;
-            // var damageFromObstacle = 10;
-            // var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-            // sawBladeHitZone.x = x;
-            // sawBladeHitZone.y = y;
-            // game.addGameItem(sawBladeHitZone);
-            // var fireball = draw.bitmap("img/images.png")
-            // sawBladeHitZone.addChild(fireball);
-            // fireball.x = -25;
-            // fireball.y = -25;
-            // }
+            function createFireball(x,y){ 
+            var hitZoneSize = 25;
+            var damageFromObstacle = 10;
+            var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+            sawBladeHitZone.x = x;
+            sawBladeHitZone.y = y;
+            game.addGameItem(sawBladeHitZone);
+            var fireball = draw.bitmap("img/images(1).png")
+            sawBladeHitZone.addChild(fireball);
+            fireball.x = -25;
+            fireball.y = -25;
+            }
             
-            // createFireball(300, 200)
+            createFireball(300, 200)
             
 
             function createEnemy(x,y){
@@ -98,9 +98,9 @@ var level01 = function (window) {
                 // reward.rotationalVelocity = 2;
     
                 reward.onPlayerCollision = function () {
-                    game.changeIntegrity(+20);
-                };
-            }
+                    game.changeIntegrity(20);
+            };git
+        }
 
             createReward(500, groundY - 20);
             createReward(910, groundY - 30);
