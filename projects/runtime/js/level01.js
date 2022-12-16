@@ -19,11 +19,28 @@ var level01 = function (window) {
                 { "type": "sawblade", "x": 400, "y": groundY },
                 { "type": "sawblade", "x": 600, "y": groundY },
                 { "type": "sawblade", "x": 900, "y": groundY },
+                { "type": "enemy", "x": 400, "y": groundY - 20 },
+                { "type": "reward", "x": 500, "y": groundY - 20 },
             ]
         };
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
         game.setDebugMode(true);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+        for (var i = 0; i < levelData.gameItems; i++ ){}
+
+        createSawBlade(800, 250);
+        createSawBlade(1190, 350);
+        createSawBlade(1600, 255);
+        createEnemy(400, groundY - 20);
+        createEnemy(800, groundY - 110);
+        createEnemy(1200, groundY - 115);
+        createReward(500, groundY - 20);
+        createReward(910, groundY - 30);
+        createReward(1300, groundY - 40);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////
 
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
@@ -40,10 +57,11 @@ var level01 = function (window) {
             obstacleImage.y = -25;
         }
 
-        createSawBlade(800, 250);
-        createSawBlade(1190, 350);
-        createSawBlade(1600, 255);
+        // createSawBlade(800, 250);
+        // createSawBlade(1190, 350);
+        // createSawBlade(1600, 255);
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // function createFireball(x,y){ 
         // var hitZoneSize = 25;
         // var damageFromObstacle = 10;
@@ -58,7 +76,7 @@ var level01 = function (window) {
         // }
 
         // createFireball(300, 200)
-
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         function createEnemy(x, y) {
             var enemy = game.createGameItem("enemy", 25);
@@ -74,6 +92,7 @@ var level01 = function (window) {
 
             enemy.onPlayerCollision = function () {
                 game.changeIntegrity(-8);
+                enemy.shrink();
             };
 
             enemy.onProjectileCollision = function () {
@@ -81,9 +100,9 @@ var level01 = function (window) {
                 enemy.shrink();
             };
         }
-        createEnemy(400, groundY - 20);
-        createEnemy(800, groundY - 110);
-        createEnemy(1200, groundY - 115);
+        // createEnemy(400, groundY - 20);
+        // createEnemy(800, groundY - 110);
+        // createEnemy(1200, groundY - 115);
 
         function createReward(x, y) {
             var reward = game.createGameItem("reward", 25);
@@ -99,18 +118,19 @@ var level01 = function (window) {
 
             reward.onPlayerCollision = function () {
                 game.changeIntegrity(20);
-            }; git
+                reward.shrink();
+            };
         }
 
-        createReward(500, groundY - 20);
-        createReward(910, groundY - 30);
-        createReward(1300, groundY - 40);
+        // createReward(500, groundY - 20);
+        // createReward(910, groundY - 30);
+        // createReward(1300, groundY - 40);
 
         // DO NOT EDIT CODE BELOW HERE
     }
 };
 
-// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+// DON'T REMOVE THIS CODE ///////////////////
 if ((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
