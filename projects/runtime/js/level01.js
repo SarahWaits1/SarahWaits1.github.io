@@ -63,20 +63,20 @@ var level01 = function (window) {
         
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        function createSaucer(x,y){ 
-        var hitZoneSize = 25;
-        var damageFromObstacle = 10;
-        var saucerHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-        saucerHitZone.x = x;
-        saucerHitZone.y = y;
-        game.addGameItem(saucerHitZone);
-        var saucer = draw.bitmap("images2.png");
-        saucerHitZone.addChild(saucer);
-        saucer.x = -25;
-        saucer.y = -25;
-        }
+        // function createSaucer(x,y){ 
+        // var hitZoneSize = 25;
+        // var damageFromObstacle = 10;
+        // var saucerHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+        // saucerHitZone.x = x;
+        // saucerHitZone.y = y;
+        // game.addGameItem(saucerHitZone);
+        // var saucer = draw.bitmap("img/images9.png");
+        // saucerHitZone.addChild(saucer);
+        // saucer.x = -25;
+        // saucer.y = -25;
+        // }
 
-        createSaucer(820, 200);
+        // createSaucer(1500, 200);
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         function createEnemy(x, y) {
