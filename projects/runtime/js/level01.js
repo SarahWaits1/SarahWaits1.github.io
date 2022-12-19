@@ -66,12 +66,12 @@ var level01 = function (window) {
         function createSaucer(x,y){ 
         var hitZoneSize = 25;
         var damageFromObstacle = 10;
-        var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-        sawBladeHitZone.x = x;
-        sawBladeHitZone.y = y;
-        game.addGameItem(sawBladeHitZone);
+        var saucerHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+        saucerHitZone.x = x;
+        saucerHitZone.y = y;
+        game.addGameItem(saucerHitZone);
         var saucer = draw.bitmap("images2.png");
-        sawBladeHitZone.addChild(saucer);
+        saucerHitZone.addChild(saucer);
         saucer.x = -25;
         saucer.y = -25;
         }
