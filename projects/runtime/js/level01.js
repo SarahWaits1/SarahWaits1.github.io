@@ -77,6 +77,8 @@ var level01 = function (window) {
         // }
 
         // createSaucer(1500, 200);
+
+        /////Couldn't find png that would work/////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         function createEnemy(x, y) {
